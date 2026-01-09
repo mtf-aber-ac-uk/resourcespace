@@ -16,7 +16,7 @@ services:
 
   mariadb:
     image: mariadb
-    container_name: mariadb
+    container_name: resourcespace-mariadb
     restart: unless-stopped
     env_file:
       - db.env
