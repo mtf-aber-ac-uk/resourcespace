@@ -10,5 +10,9 @@ chmod +x /etc/cron.daily/*
 chown www-data /var/www/html/include/config.php
 chmod 744 /var/www/html/include/config.php
 
+# Link the config files to volumes
+rm /var/www/html/include/config.php
+ln -s /etc/resourcespace/resourcespace.php /var/www/html/include/config.php
+
 # Start Apache in the foreground (keeps the container alive)
 apachectl -D FOREGROUND
