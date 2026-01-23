@@ -13,6 +13,8 @@ chmod 744 /var/www/html/include/config.php
 # Link the config files to volumes
 rm /var/www/html/include/config.php
 ln -s /etc/resourcespace/resourcespace.php /var/www/html/include/config.php
+rm /var/www/html/plugins/simplesaml/config/config.php
+ln -s /etc/resourcespace/simplesaml.php /var/www/html/plugins/simplesaml/config/config.php
 
 # Start Apache in the foreground (keeps the container alive)
 apachectl -D FOREGROUND
